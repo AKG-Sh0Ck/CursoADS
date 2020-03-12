@@ -10,7 +10,7 @@ int main(void)
    scanf("%d",&num);
    printf("Digite outro número: ");
    scanf("%d",&num2);
-   if (num == 0 || num2 == 0)
+   if (num2 == 0)
    {
         printf("Não se pode dividir por zero.\n");
         return 0;
