@@ -31,7 +31,7 @@ int main(void)
 //Caso os anos sejam iguais, compara os meses
     if (A1 == A2)
     {
-            if (M1 > M2)
+        if (M1 > M2)
         {
             printf("%i/%i/%i é a data maior.\n", D1, M1, A1);    
         }
@@ -44,7 +44,7 @@ int main(void)
 //Caso os meses também sejam iguais, compara os dias
     if (M1 == M2)
     {
-            if (D1 > D2)
+        if (D1 > D2)
         {
             printf("%i/%i/%i é a data maior.\n", D1, M1, A1);    
         }
