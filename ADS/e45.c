@@ -6,7 +6,7 @@ int main(void)
     printf("Digite um número inteiro...\n");
     scanf("%i", &num);
 
-    if ((num % 2 == 0)) 
+    if (num % 2 == 0) 
     {
         printf("%i é um número par!\n", num);
     }
