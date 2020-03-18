@@ -1,115 +1,65 @@
+//Nesse código, considerei a data mais recente como a maior.
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
 
-int main (){
-		setlocale (LC_ALL, "Portuguese");
-	
-	int dia1, mes1, ano1, data1;
-	int dia2, mes2, ano2, data2;
-	
-	printf ("Dia: ");
-	scanf ("%d", &dia1);
-	 
-	 
-	 if (dia1 > 31){
-	 	printf("Dia inválido!");
-	 	return 0;
-	 }
-	 else if (dia1 < 1){
-	 	printf("Dia inválido!");
-	 	return 0;
-	 }
-	
-	printf ("Mês: ");
-	scanf ("%d", &mes1);
-	
-	if (mes1 > 12){
-		printf("Mês inválido!");
-	 	return 0;
-	}
-	else if (mes1 < 1){
-		printf("Mês inválido!");
-	 	return 0;
-	}
-	
-	printf ("Ano: ");
-	scanf ("%d", &ano1);
-	 system("cls"); 	//Limpa a tela no windows; no linux é system(“clear”); 
-//system() executa comandos do SO; Ex.: calc.exe
-//O que conseguir executar num “cmd” pode tentar rodar a partir de um system();
-//Estamos criando programas de “console” e possuem as limitações do console do Sistema Operacional (SO)
-	 
-	if (ano1 < 1000){
-	printf("Ano inválido!");
-	return 0;
-	}
-	else if (ano1 > 9999){
-	printf("Ano inválido!");
-	return 0;
-	}
-	
-	
-	printf ("Dia: ");
-	scanf ("%d", &dia2);
-	 
-	 
-	 if (dia2 > 31){
-	 	printf("Dia inválido!");
-	 	return 0;
-	 }
-	 else if (dia2 < 1){
-	 	printf("Dia inválido!");
-	 	return 0;
-	 }
-	 
-	printf ("Mês: ");
-	scanf ("%d", &mes2);
-	
-	if (mes2 > 12){
-		printf("Mês inválido!");
-	 	return 0;
-	}
-	else if (mes2 < 1){
-		printf("Mês inválido!");
-	 	return 0;
-	}
-	
-	printf ("Ano: ");
-	scanf ("%d", &ano2);
-	system("cls");
-	 
-	if (ano2 < 1000){
-		printf("Ano inválido!");
-		return 0;
-	}
-	else if (ano2 > 9999){
-		printf("Ano inválido!");
-		return 0;
-	}
-	
-	printf("-------------------------------------------------\n");
-	printf("Primeira data informada: %d/%d/%d             -\n", dia1,mes1,ano1);
-	printf("-------------------------------------------------\n");
-	printf("Segunda data informada: %d/%d/%d              -\n", dia2,mes2,ano2);
-	printf("-------------------------------------------------\n\n\n");
-	
-		data1 = (dia1 + mes1 + ano1);
-		data2 = (dia2 + mes2 + ano2);
-		
-		if (data1 > data2){
-			printf("*************************************************\n");
-			printf("A primeira data é maior!                        *\n");
-			printf("*************************************************\n");
-		}
-		else if (data1 == data2){
-			printf("*************************************************\n");
-			printf("As datas estão iguais!                          *\n");
-			printf("*************************************************\n");
-		}
-		else{
-			printf("*************************************************\n");
-			printf("A segunda data é maior!                         *\n");
-			printf("*************************************************\n");
-		}
+int main(void)
+{
+    int D1, M1, A1;
+    int D2, M2, A2;
+
+    printf("Digite uma data (DD/MM/AAAA)...\n");
+    scanf("%i%*C%i%*C%i", &D1, &M1, &A1); //Busca os três conjuntos de números ignorando os caracteres não-numéricos
+//Verifica validade estrutural
+    if (D1 > 31 || D1 < 1 || M1 > 12 || M1 < 1 || A1 == 0)
+    {
+        printf("Data inválida!\n");
+        return 0;
+    }
+    printf("Digite outra data (DD/MM/AAAA)...\n");
+    scanf("%i%*C%i%*C%i", &D2, &M2, &A2); //Busca os três conjuntos de números ignorando os caracteres não-numéricos
+//Verifica validade estrutural     
+        if (D2 > 31 || D2 < 1 || M2 > 12 || M2 < 1 ||A1 == 0)
+    {
+        printf("Data inválida!\n");
+        return 0;
+    }
+
+//Verifica qual ano é maior
+    if (A1 > A2)
+    {
+        printf("%i/%i/%i é a data maior.\n", D1, M1, A1);
+        return 0;    
+    }
+    else 
+        if (A2 > A1)
+        {
+            printf("%i/%i/%i é a data maior.\n", D2, M2, A2);
+            return 0;    
+        } 
+        else   
+            if (M1 > M2)
+            {
+                printf("%i/%i/%i é a data maior.\n", D1, M1, A1);
+                return 0;    
+            } 
+            else
+                if (M2 > M1)
+                {
+                    printf("%i/%i/%i é a data maior.\n", D2, M2, A2);
+                    return 0;    
+                } 
+                else
+                    if (D1 > D2)
+                    {
+                        printf("%i/%i/%i é a data maior.\n", D1, M1, A1);
+                        return 0;    
+                    }        
+                    else
+                        if (D2 > D1)
+                        {
+                            printf("%i/%i/%i é a data maior.\n", D2, M2, A2);
+                            return 0;  
+                        } 
+                        else
+                        printf("As datas são iguais!\n");
+                        return 0;
 }
