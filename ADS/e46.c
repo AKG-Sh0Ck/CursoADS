@@ -1,4 +1,5 @@
 //Nesse código, considerei a data mais recente como a maior.
+//Essa foi a solução inicial que eu encontrei, o código não é de todo funcional
 #include <stdio.h>
 
 int main(void)
@@ -17,7 +18,7 @@ int main(void)
     printf("Digite outra data (DD/MM/AAAA)...\n");
     scanf("%i%*C%i%*C%i", &D2, &M2, &A2); //Busca os três conjuntos de números ignorando os caracteres não-numéricos
 //Verifica validade estrutural     
-        if (D2 > 31 || D2 < 1 || M2 > 12 || M2 < 1 ||A1 == 0)
+    if (D2 > 31 || D2 < 1 || M2 > 12 || M2 < 1 || A1 == 0)
     {
         printf("Data inválida!\n");
         return 0;
