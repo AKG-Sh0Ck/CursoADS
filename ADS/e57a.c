@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 int x, y;
-char quad;
 
-int main(void)
+int main(void) //Simples
 {
 
     printf("Digite a coordenada X:\n");
@@ -14,38 +13,37 @@ int main(void)
         
     if (x > 0 && y > 0)
     {
-        quad = 'A';
-    }
-        
-    else if (x > 0 && y < 0)
-    {
-        quad = 'B';
-    }
-        
-    else if (x < 0 && y < 0)
-    {
-        quad = 'C';
-    }
-        
-    else if (x < 0 && y > 0)
-    {
-        quad = 'D';
-    }
-    
-    else 
-    {
-        if (x == 0)
-        {
-            printf("O ponto está sobre o eixo cartesiano X.\n");
-        }       
-        if (y == 0)
-        {
-            printf("O ponto está sobre o eixo cartesiano Y.\n");
-        }
+        printf("O ponto está no quadrante A.\n");
         return 0;
     }
-    
-    printf("O ponto está no quadrante %c\n", quad);
-    return 0;
+        
+    if (x > 0 && y < 0)
+    {
+        printf("O ponto está no quadrante B.\n");
+        return 0;
+    }
+        
+    if (x < 0 && y < 0)
+    {
+        printf("O ponto está no quadrante C.\n");
+        return 0;
+    }
+        
+    if (x < 0 && y > 0)
+    {
+        printf("O ponto está no quadrante D.\n");
+        return 0;
+    }
 
+    if (x == 0)
+    
+    {
+        printf("O ponto está sobre o eixo cartesiano Y.\n");
+    }       
+ 
+    if (y == 0)
+    {
+        printf("O ponto está sobre o eixo cartesiano X.\n");
+    }
+    return 0;
 }

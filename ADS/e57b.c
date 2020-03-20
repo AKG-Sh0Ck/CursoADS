@@ -3,7 +3,7 @@
 int x, y;
 char quad;
 
-int main(void)
+int main(void)    //Aninhado
 {
 
     printf("Digite a coordenada X:\n");
@@ -36,16 +36,16 @@ int main(void)
     {
         if (x == 0)
         {
-            printf("O ponto está sobre o eixo cartesiano X.\n");
+            printf("O ponto está sobre o eixo cartesiano Y.\n");
         }       
         if (y == 0)
         {
-            printf("O ponto está sobre o eixo cartesiano Y.\n");
+            printf("O ponto está sobre o eixo cartesiano X.\n");
         }
         return 0;
     }
     
-    printf("O ponto está no quadrante %c\n", quad);
+    printf("O ponto está no quadrante %c\n.", quad);
     return 0;
 
 }
