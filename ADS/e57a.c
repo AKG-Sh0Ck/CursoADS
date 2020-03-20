@@ -35,16 +35,17 @@ int main(void)
     else 
     {
         if (x == 0)
-            {
-                printf("O ponto está sobre o eixo cartesiano X.\n");
-            }       
+        {
+            printf("O ponto está sobre o eixo cartesiano X.\n");
+        }       
         if (y == 0)
-            {
-                printf("O ponto está sobre o eixo cartesiano Y.\n");
-            }
+        {
+            printf("O ponto está sobre o eixo cartesiano Y.\n");
+        }
         return 0;
     }
     
     printf("O ponto está no quadrante %c\n", quad);
     return 0;
+
 }
