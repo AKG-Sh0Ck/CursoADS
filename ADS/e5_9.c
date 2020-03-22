@@ -17,6 +17,7 @@ int main(void)
             num1 = num0-num1;
             num0 = num0-num1;
         }
+       
         //Verifica se há módulo
         if (num1 % num0 == 0)
         {

@@ -20,7 +20,7 @@ int main(void)
             printf("Um pouco menor...\n");
             printf("Você tem mais %i tentativa(s).\n\n", t);
         }
-        else if (num == 7)
+        else (num == 7)
         {
             printf("Acertou!\n");
             t = 0;
