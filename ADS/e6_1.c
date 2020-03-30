@@ -11,7 +11,7 @@ int main(void)
     {
         switch (idade)
         {
-            case 0 ... 15:
+                case 0 ... 15:
                 printf("Não vota ainda.\n");
                 break;
 
